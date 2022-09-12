@@ -1,0 +1,8 @@
+/*toto*/ = commentaire en C
+.h = fichier header
+#include = importer une librairie
+en C toujours écrire la fonction main pour pouvoir le compiler
+printf(printfile) = instruction qui vient de la bibliothèque stdio.h
+, sépare les arguments dans une fonction
+0 avant un nombre = base 8
+0x = hexa
