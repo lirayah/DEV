@@ -1,0 +1,5 @@
+%.xf  x=un nombre -> permet d'avoir plus de chiffres après la virgule
+getchar();
+n = getchar();  permet de demander un caractère(a faire avec le 1e car vide le tampon)
+scanf permet de demander un nombre ou un cara /!\ mettre un espace avant le %c pour 
+ignorer les espaces dans le tampon préexistants.
