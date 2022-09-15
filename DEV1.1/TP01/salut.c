@@ -4,6 +4,6 @@
 #include <stdio.h>
 
 int main(void) {
-  printf("%c", "Hello World!");
+  printf("Hello World!\n");
   return EXIT_SUCCESS;
 }
