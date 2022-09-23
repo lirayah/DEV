@@ -1,11 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <math.h>
 
 int main(void){
 	int a;
 	int b=2;
-	int c;
 	int d;
 	printf("nombre");
 	scanf(" %d", &a);
