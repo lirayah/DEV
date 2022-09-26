@@ -10,10 +10,12 @@ int main(void){
     int f;
     char s;
     printf(" t) Triangle\n c) Carre\n q) Quitter\n");
-    s=getchar();
-    if(s=='t'){
+    while(s!='q'){
+     getchar;
+     s=getchar();
+      if(s=='t'){
         printf("Hauteur? ");
-        scanf("%d",&b);
+        scanf(" %d",&b);
         for(a=0;a<b;a++){
             for(c=0;c<=d;c++){
                 printf("*");
@@ -24,7 +26,7 @@ int main(void){
     }
     if (s=='c'){
         printf("Hauteur? ");
-        scanf("%d",&b);
+        scanf(" %d",&b);
         for(a=0;a<b;a++){
             printf("*");
         }
@@ -41,7 +43,7 @@ int main(void){
             printf("*");
         }printf("\n");
     }
-    if(s=='q'){
-        return EXIT_SUCCESS;
     }
+    printf("Au revoir...\n");
+    return EXIT_SUCCESS;
 }
