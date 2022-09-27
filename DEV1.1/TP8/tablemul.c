@@ -17,8 +17,8 @@ int main(void){
 		printf("-");
 	}
 	printf("+");
-	for (b=0;b<=4*d;b++)
-		printf("-");
+	for (b=0;b<=d;b++)
+		printf("----");
 	
 	for (b=0;b<=d;b++){
 		printf("\n");
