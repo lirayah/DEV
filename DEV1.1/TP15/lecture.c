@@ -5,5 +5,5 @@
 int main(void){
     
     char mdp[27];
-    
+
 }
