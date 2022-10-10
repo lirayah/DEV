@@ -20,7 +20,7 @@ int main(void){
 	for (b=0;b<=d;b++)
 		printf("----");
 	
-	for (b=0;b<=d;b++){
+	for (b=0;b<=10;b++){
 		printf("\n");
 		printf("%3d  |",b);
 		for (a=0;a<=d;a++){
