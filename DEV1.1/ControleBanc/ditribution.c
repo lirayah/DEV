@@ -5,7 +5,6 @@
 int main(void){
     srand(time(NULL));
     int a;
-    
     int b=5;
     int i;
     int j;
