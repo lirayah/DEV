@@ -6,7 +6,7 @@ int main(void){
     int i=0;
     int fin=1;
     char mdp[26];
-    printf("Coucou: \n");
+    printf("Coucou tu veux voir Malphite?: \n");
     for(i=0;i<26 && fin;i++){
         mdp[i]=getchar();
         if (mdp[i]=='\n'){
