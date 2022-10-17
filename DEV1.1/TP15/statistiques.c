@@ -3,5 +3,6 @@
 #include<string.h>
 
 int main(void){
+    char tab[200];
     
 }
