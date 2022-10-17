@@ -4,14 +4,16 @@
 
 int main(void){
     int a=0;
+    int b=200;
     int i;
     char tab[200];
-    printf("phrase");
+    printf("phrase: ");
     scanf("%200s",tab);
     printf("%s\n",tab);
-    for(i=0;i<199;i++){
-        if(tab[i]=e){
+    for(i=0;i<200;i++){
+        if(tab[i]=='e'){
             a++;
         }
     }
+    printf("%d\n",a);
 }
