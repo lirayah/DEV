@@ -5,12 +5,12 @@ int main(void){
     int i;
     int f;
     int tab[19];
-    for(i=0;i<19;i++){
+    for(i=0;i<20;i++){
         f=0;
         printf("Nombre %d ",i+1);
         scanf("%d",&tab[i]);
     }
-    for(i=0;i<19;i++){
+    for(i=0;i<20;i++){
         f=0;
         while (f<tab[i]){
             printf("▄");
