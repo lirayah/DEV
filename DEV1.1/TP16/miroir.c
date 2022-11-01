@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include<time.h>
 
-int affichage(void){
+int affichage(int tab[10]){
     int i;
     for(i=0;i<10;i++){
     printf("+-----");
@@ -11,7 +11,7 @@ int affichage(void){
     printf("\n");
     for(i=0;i<10;i++){
         printf("| ");
-        printf("%3d");//,tab[i]);
+        printf("%3d",tab[i]);
         printf(" ");
     }
     printf("|");
@@ -23,30 +23,43 @@ int affichage(void){
     return 0;
 }
 
-int remplissage(void){
+int remplissage(int tab[10]){
     int a=-50;
     int b=50;
+    int i;
     int j;
     srand(time(NULL));
     for(j=0;j<10;j++){
         tab[j]=a+rand()%(b-a+1);
     }
-    for(i=0;i<10;i++){
-        printf("| ");
-        printf("%3d",tab[i]);
-        printf(" ");
-    }
     return 0;
 }
 
-int inverse(){
+int inverse(int tab[10]){
+    int i;
     int j;
+    for(i=0;i<10;i++){
+        printf("+-----");
+    }
+    printf("+\n");
+    for(j=9;j>=0;j--){
+        printf("| ");
+        printf("%3d",tab[j]);
+        printf(" ");
+    }
+    printf("|");
+    printf("\n");
+    for(j=0;j<10;j++){
+        printf("+-----");
+    }
+    printf("+\n");
 }
 
 
 int main(void){
     int tab[10];
-    remplissage();
-    affichage();
-    inverse();
+    remplissage(tab);
+    affichage(tab);
+    inverse(tab);
+    return EXIT_SUCCESS;
 }
