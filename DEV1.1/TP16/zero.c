@@ -1,7 +1,7 @@
 #include<stdlib.h>
 #include<stdio.h>
 
-int zero(double *a) {
+void zero(double *a) {
   *a = 0.0;
 }
 
