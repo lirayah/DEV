@@ -1,0 +1,17 @@
+body {
+    font-family:sans-serif;
+}
+h1 {
+    font-variant:small-caps;
+    text-decoration : underline;
+}
+h2 {
+    background-color:#aaaaaa;
+    padding : 10px;
+    font-style:italic;
+}
+span {
+    font-family: monospace;
+    font-weight:bold;
+    color : #aa4512;
+}

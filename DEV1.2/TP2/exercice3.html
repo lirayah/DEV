@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercice 2</title>
+    </head>
+    <body>
+        <form method="post" action="https://dwarves.iut-fbleau.fr/requete.php" enctype="application/x-www-form-urlencoded">
+            <p><label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" required>
+            </p>
+            <p><label for="prenom">Prénom</label>
+            <input type="text" name="prenom" id="prenom" required>
+            </p>
+            <p><label for="birthday">Date de naissance</label>
+                <input type="date" name="birthday" id="birthday" required>
+            </p>
+            <p><label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </p>
+            <p><label for="Postal">Code Postal</label>
+                <input type="number" name="Postal" id="postal" max="99999" required>
+            </p>
+            <p><label for="tel">Numéro de téléphone</label>
+                <input type="tel" name="tel" id="tel" pattern="0[6-7]{1}[0-9]{8}" required>
+            </p>
+            <p><label for="sexe">Sexe</label>
+                <input type="radio" name="Sexe" value="Homme" id="Homme" required>
+                <label for="Homme">Homme</label>
+                <input type="radio" name="Sexe" value="Femme" id="Femme" required>
+                <label for="Femme">Femme</label>
+                <input type="radio" name="Sexe" value="Autre" id="Autre" required>
+                <label for="Autre">Autre</label>
+            </p>
+            <p><label for="Semestre">Semestre</label>
+                <select name="Semestre" id="Semestre" required>
+                    <option value="S1">S1</option>
+                    <option value="S2" selected>S2</option>
+                    <option value="S3">S3</option>
+                    <option value="S4">S4</option>
+                </select>
+            </p>
+            <p><label for="HTML">HTML (entre 0 et 10)
+                <input type="range" name="HTML" id="HTML" min="0" max="10" value="5" required>
+            </p>
+            <p>
+                <label for="Message">Message</label>
+                <input type="text" name="Message" id="Message" required>
+            </p>
+            <br>
+            
+            <input type="submit" value="submit">
+            <input type="reset">
+        </form>
+    </body>
