@@ -3,6 +3,7 @@
 #include<time.h>
 
 int main(void){
-     a=localtime;
-    printf("%d",a);
+    time_t temps=time(NULL);
+    struct tm * today=localtime(&temps);
+    printf("%s/%s/%s",today->tm_year+1900,today->tm_mon+1,today->tm_mday);
 }
