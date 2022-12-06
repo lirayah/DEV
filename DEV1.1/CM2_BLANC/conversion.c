@@ -1,16 +1,17 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 
-int main(double argc,char *argv[]){
-    char a=argv[2];
-    double i=(double)argv[1];
-    if(a=="cm"){
+int main(int argc,char* argv[]){
+    char* a=argv[2];
+    double i=strtod(argv[1],NULL);
+    if(strcmp(a,"cm")==0){
         i=i/2.54;
-        printf("%lf in",i);
+        printf("%.4lf in\n",i);
     }
-    if(a=="in"){
+    if(strcmp(a,"in")==0){
         i=i*2.54;
-        printf("%lf cm",i);
+        printf("%.4lf cm\n",i);
     }
 }
 
