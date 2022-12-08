@@ -76,6 +76,7 @@ tags
 DEV1.1/morinl_CM1.tar.gz
 DEV1.1/TP18/exo1.tar.gz
 DEV1.1/TP18/exo1/exo1
+<<<<<<< HEAD
 DEV1.1/pietrois_CM2.tar.gz
 DEV1.1/CM2axel/:
 DEV1.1/CM2axel/Ralenti/ralenti.c
@@ -85,3 +86,6 @@ DEV1.1/CM2axel/Recherche/recherche_fonc.c
 DEV1.1/CM2axel/Recherche/recherche_fonc.h
 DEV1.1/CM2axel/Recherche/recherche_main.c
 DEV1.1/CM2axel/Reproduction/reproduction.c
+=======
+DEV1.1/.vscode/tasks.json
+>>>>>>> e33bc83e783f5cedb6efd3d4390b10ddae081c14
