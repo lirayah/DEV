@@ -1,14 +1,19 @@
 li{
     list-style-type: none;
-    padding:3px;
-    margin:5px;
-}
-
-li:nth-child(even){
-    background-color: #ef0107;
-
+    padding-bottom:2px;
+    margin-bottom:5px;
 }
 
 li:nth-child(2n+1){
-    background-color: #7fff00;
+    background-color: #4a4a4a;
+    font-style: italic;
+    color:#ffffff;
+}
+
+li:nth-child(2n){
+    background-color: #afafaf;
+}
+
+ul{
+    padding-left: 0px;
 }
