@@ -1,0 +1,26 @@
+table {
+	font-family: sans-serif;
+	border-collapse: collapse;
+	margin : auto;
+	width:700px;
+}
+table caption {
+
+	font-weight: bold;
+	font-variant: small-caps;
+
+}
+
+th {
+	border-bottom: 3px solid black;
+	border-top: 3px solid black;
+	text-align: left;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+
+td {
+	border-bottom: 1px solid lightgray;
+	text-align: left;
+}
+
