@@ -1,0 +1,27 @@
+ul {
+
+	text-align: center;
+	padding:0;
+}
+li {
+	list-style-type: none;
+	list-style-position: inside;
+	display: inline-block;
+	margin-right: 2em;
+	font-size : 2em;
+}
+li:last-child{
+	margin-right:0;
+
+}
+article {
+	text-align: justify;
+	border : 1px solid grey;
+	padding : 1em;
+}
+
+@media screen and (max-width: 640px){
+    nav{
+        display: none;
+    }
+}

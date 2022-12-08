@@ -1,0 +1,29 @@
+li{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0px;
+}
+
+ul{
+    border:1px solid #000000;
+    top:0%;
+    height: 50px;
+}
+
+a[href*="https://developer.mozilla.org/docs/Web/HTML"]{
+    padding:20px;
+    vertical-align: -20px;
+    background-image:url("https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain.svg");
+}
+
+a[href*="https://developer.mozilla.org/docs/Web/CSS"]{
+    padding:20px;
+    vertical-align: -20px;
+    background-image:url("https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg");
+}
+
+a[href*="https://developer.mozilla.org/docs/Web/Javascript"]{
+    padding:20px;
+    vertical-align: -20px;
+    background-image:url("https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg");
+}
