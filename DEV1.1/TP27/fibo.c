@@ -11,10 +11,14 @@ int fibo(int i){
 		}
 }
 
+int fibfab(int i){
+	printf("%d ",fibo(i-2)+fibo(i-1));
+}
+
 int main(void){
 	int un=15,rep;
 	/*printf("u combien: ");
 	scanf(" %d", &un);*/
-	rep=fibo(un);
+	rep=fibfab(un);
 	printf("%d\n",rep);
 }
