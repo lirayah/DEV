@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #61b0d1, 50%, #62fdf0);
+    align-items: center;
+}
+
+/* Barre de navigations */
+
+ul {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    height: auto;
+    background-color: #236427;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 110px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(37, 63, 20);
+}
+
+.active {
+    background-color: #4c744d;
+}
+
+/* */
+
+div.test {
+    display: flex;
+    width: 439px;
+    height: 600px;
+    overflow: auto;
+}
