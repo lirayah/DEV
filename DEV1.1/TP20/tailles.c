@@ -10,5 +10,6 @@ struct taille
 
 
 int main (void){
-    sizeof()
+    struct taille test={};
+    printf("%d\n",sizeof(test));
 }
