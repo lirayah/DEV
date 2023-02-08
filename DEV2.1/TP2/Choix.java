@@ -4,12 +4,13 @@ import java.awt.BorderLayout;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 
 public class Choix {
     public static void main(String[] args) {
         JFrame fenetre= new JFrame();
-        ButtonGroup groupe=new ButtonGroup()
+        ButtonGroup groupe=new ButtonGroup();
         fenetre.setSize(500,500);
         fenetre.setLocation(0,0);
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -18,14 +19,19 @@ public class Choix {
         JRadioButton ravenclaw=new JRadioButton("Serdaigle");
         JRadioButton slytherin=new JRadioButton("Serpentard");
         
+        gryffindor.setHorizontalAlignment(JLabel.CENTER);
+        ravenclaw.setHorizontalAlignment(JLabel.CENTER);
+        slytherin.setHorizontalAlignment(JLabel.CENTER);
+        
         groupe.add(gryffindor);
         groupe.add(ravenclaw);
         groupe.add(slytherin);
-
+        
         fenetre.add(gryffindor,BorderLayout.NORTH);
         fenetre.add(ravenclaw,BorderLayout.CENTER);
-        fenetre.add(slytherin,BorderLayout.EAST);
+        fenetre.add(slytherin,BorderLayout.SOUTH);
         
+
         fenetre.setVisible(true);
     }
 }
