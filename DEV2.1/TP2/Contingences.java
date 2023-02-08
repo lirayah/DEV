@@ -20,8 +20,8 @@ public class Contingences {
         champ.setForeground(new Color(0,255,0));
         champ.setBackground(new Color(0,0,0));
 
-        JScrollBar derou= new JScrollBar(champ);
-        derou.setVerticalScrollBarPolicy();
+        JScrollBar derou= new JScrollBar();
+        derou.setVerticalScrollBarPolicy(VERTICAL_SCROLLBAR_AS_NEEDED);
 
         fenetre.setVisible(true);
     }
