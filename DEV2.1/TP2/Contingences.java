@@ -9,19 +9,21 @@ public class Contingences {
         fenetre.setSize(500,500);
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JTextField zone = new JTextField("Je suis une patate"); 
-        fenetre.add(zone,BorderLayout.SOUTH);
-        zone.setHorizontalAlignment(JTextField.CENTER);
-        zone.setForeground(new Color(0,255,0));
-        zone.setBackground(new Color(112,112,122));
-
-        JTextArea champ = new JTextArea("test");
-        fenetre.add(champ,BorderLayout.CENTER);
+        JTextField champ = new JTextField("Je suis une patate"); 
+        fenetre.add(champ,BorderLayout.SOUTH);
+        champ.setHorizontalAlignment(JTextField.CENTER);
         champ.setForeground(new Color(0,255,0));
-        champ.setBackground(new Color(0,0,0));
+        champ.setBackground(new Color(112,112,122));
 
-        JScrollBar derou= new JScrollBar();
-        derou.setVerticalScrollBarPolicy(VERTICAL_SCROLLBAR_AS_NEEDED);
+        JTextArea zone = new JTextArea("test");
+        fenetre.add(zone,BorderLayout.CENTER);
+        zone.setForeground(new Color(0,255,0));
+        zone.setBackground(new Color(0,0,0));
+        zone.setLineWrap(true);
+
+        JScrollPane derou = new JScrollPane(zone);
+        derou.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        fenetre.add(derou,BorderLayout.CENTER);
 
         fenetre.setVisible(true);
     }
