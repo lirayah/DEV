@@ -1,9 +1,8 @@
 package TP3;
 
 import java.awt.*;
-
 import javax.swing.*;
-import javax.swing.plaf.DimensionUIResource;
+
 
 public class Choix {
     public static void main(String[] args) {
@@ -12,8 +11,9 @@ public class Choix {
         fenetre.setSize(500,500);
         fenetre.setLocation(0,0);
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Dimension taille=new Dimension();
-        taille.setMinimumSize(100,100);
+        Dimension taille=new Dimension(300,300);
+        fenetre.setMinimumSize(taille);
+        
 
         
         JRadioButton gryffindor=new JRadioButton("Gryffondor");
