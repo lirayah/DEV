@@ -14,6 +14,7 @@ public class Question {
         fenetre.setMinimumSize(size);
         GridLayout gestionnaire= new GridLayout(2,1);
         fenetre.setLayout(gestionnaire);
+        
         JPanel pano1=new JPanel(new BorderLayout());
         JPanel pano2=new JPanel();
         
