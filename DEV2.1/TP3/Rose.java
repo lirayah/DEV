@@ -15,6 +15,11 @@ public class Rose {
         JPanel pano1=new JPanel(new BorderLayout());
         JPanel pano2=new JPanel(new BorderLayout());
         JPanel pano3=new JPanel(new BorderLayout());
+        JPanel pano4=new JPanel(new BorderLayout());
+        JPanel pano5=new JPanel(new BorderLayout());
+        JPanel pano6=new JPanel(new BorderLayout());
+        JPanel pano7=new JPanel(new BorderLayout());
+        JPanel pano8=new JPanel(new BorderLayout());
 
         //PANO1
         JLabel Mystral=new JLabel("Mystral");
