@@ -1,6 +1,6 @@
 package TP4;
 
-public class Progression {
+public class Progression{
     public static void main(String[] args) {
         Compteur c = new Compteur();
         for (int i = 0; i < 4; i++) {

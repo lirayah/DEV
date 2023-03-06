@@ -1,15 +1,16 @@
 package TP4;
 
-public class Lendemains {
+public class Lendemains{
     private int annee;
     private int mois;
     private int jour;
     
-    public Lendemains(){
-        this.annee=2023;
-        this.mois=02;
-        this.jour=14;
+    public Lendemains(int a, int m, int j){
+        this.annee=a;
+        this.mois=m;
+        this.jour=j;
     }
+
     public void jourApr(){
         this.jour++;
         if(this.jour==29 && this.mois==2){
@@ -37,10 +38,20 @@ public class Lendemains {
             this.mois=1;
             this.annee++;
         }
-
     }
+    
+    public void Compare(Lendemains i,Lendemains j){
+        if (i.annee == j.annee && i.mois == j.mois && i.jour == j.jour) {
+            System.out.println("C'est les memes mon con");
+        }
+        else{
+            System.out.println("T NUL");
+        }
+    }
+
+    @Override
     public String toString() {
-        return Integer.toString(this.annee) + "-" + Integer.toString(this.mois) + "-" + Integer.toString(this.jour);
+        return "Le Lendemain est: " + Integer.toString(this.annee) + "-" + Integer.toString(this.mois) + "-" + Integer.toString(this.jour);
     }
 }
 

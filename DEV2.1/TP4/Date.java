@@ -10,7 +10,7 @@ public class Date {
         this.mois=02;
         this.jour=14;
     }
-
+    @Override
     public String toString() {
         return Integer.toString(this.annee) + "-" + Integer.toString(this.mois) + "-" + Integer.toString(this.jour);
     }
