@@ -5,9 +5,11 @@ import java.awt.*;
 
 public class Img extends JComponent{
     private Image logo;
+    private String chemin=new String("cercles.png");
+
     public Img(){
         super();
-        this.logo=Toolkit.getDefaultToolkit().getImage("cercles.png");
+        this.logo=Toolkit.getDefaultToolkit().getImage(chemin);
     }
 
     @Override
