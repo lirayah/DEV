@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class Img extends JComponent{
     private Image logo;
-    private String chemin=new String("cercles.png");
+    private String chemin=new String("TP6/cercles.png");
 
     public Img(){
         super();
