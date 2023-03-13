@@ -8,6 +8,8 @@ public class Formes {
         JFrame fenetre=new JFrame();
         fenetre.setSize(500,500);
         fenetre.setLocation(0,0);
+        GridLayout gestionnaire=new GridLayout(4,2);
+        fenetre.setLayout(gestionnaire);
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         Carre c = new Carre();
@@ -15,9 +17,17 @@ public class Formes {
         fenetre.add(c);
 
         Disque d=new Disque();
-        c.setOpaque(true);
+        d.setOpaque(true);
         fenetre.add(d);
 
+        Img i = new Img();
+        i.setOpaque(true);
+        fenetre.add(i);
+
+        Owo o=new Owo();
+        o.setOpaque(true);
+        fenetre.add(o);
+        
         fenetre.setVisible(true);
     }
 }
