@@ -13,7 +13,7 @@ public class Sautoir {
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         
-        for (int i = 0; i < 24; i++) {
+        for (int i = 0; i < 25; i++) {
             Sablier a=new Sablier();
             a.setOpaque(true);
             fenetre.add(a);
