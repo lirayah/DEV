@@ -8,7 +8,7 @@ public class Formes {
         JFrame fenetre=new JFrame();
         fenetre.setSize(500,500);
         fenetre.setLocation(0,0);
-        GridLayout gestionnaire=new GridLayout(4,2);
+        GridLayout gestionnaire=new GridLayout(2,2);
         fenetre.setLayout(gestionnaire);
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
