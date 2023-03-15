@@ -14,11 +14,11 @@ public class Accueil {
         Color bgColor=new Color(212, 115, 212);
         fenetre.getContentPane().setBackground(bgColor);
 
-        Auth a=new Auth();
-        fenetre.add(a);
+        Img i=new Img("TP6/logo.png");
+        fenetre.add(i);
 
-        JTextField login=new JTextField("login");
-        fenetre.add(login);
+        Log b=new Log();
+        fenetre.add(b);
 
         fenetre.setVisible(true);
     }

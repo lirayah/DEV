@@ -20,7 +20,7 @@ public class Formes {
         d.setOpaque(true);
         fenetre.add(d);
 
-        Img i = new Img();
+        Img i = new Img("TP6/cercles.png");
         i.setOpaque(true);
         fenetre.add(i);
 
