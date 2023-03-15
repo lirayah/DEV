@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class Test {
     public static void main(String[] args) {
-        Vehicule v;
+        Vehicules v;
         Object[] choix = {"Voiture", "Moto"};
      
         int reponse = JOptionPane.showOptionDialog(null,
