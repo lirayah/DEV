@@ -1,5 +1,14 @@
 package TP7;
 
-public abstract class Voiture {
-    
+public class Voiture implements Vehicules{
+
+    public Voiture(){
+
+    }
+    public int nbRoues(){
+        return 4;
+    }
+    public String sorte(){
+        return "voiture";
+    }
 }
