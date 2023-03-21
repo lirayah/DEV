@@ -12,7 +12,6 @@ public class Activite extends JComponent implements WindowListener{
     private int[] yPoints;
     private int nPoints;
 
-
     public Activite(){
         super();
         this.xPoints=new int[4];
@@ -20,12 +19,10 @@ public class Activite extends JComponent implements WindowListener{
         this.nPoints=4;
     }
 
-    public void windowActivated(WindowEvent e){
-        @Override
-        protected void paintComponent(Graphics pinceau) {
-            Graphics pinpin=pinceau.create();
-        }
-        pinpin.setColor(Color.green)
+    /*@Override
+    protected void paintComponent(Graphics pinceau) {
+        Graphics pinpin=pinceau.create();
+        pinpin.setColor(Color.green);
         this.xPoints[0]=1;
         this.xPoints[1]=this.getWidth()-1;
         this.xPoints[2]=1;
@@ -35,5 +32,9 @@ public class Activite extends JComponent implements WindowListener{
         this.yPoints[2]=1;
         this.yPoints[3]=this.getHeight()-1;
         pinpin.fillPolygon(xPoints,yPoints,nPoints);
+    }
+    */
+    public void windowActivated(WindowEvent e){
+        this.setBackground(Color.yellow);
     }
 }

@@ -1,13 +1,6 @@
 package TP7;
 
 public abstract class Moyenne {
-    private Moyenne a;
-    private int j;
-
-    public Moyenne(){
-        Moyenne a;
-        int j;
-    }
     public abstract byte add(byte b);
 
     public abstract short add(short s);
