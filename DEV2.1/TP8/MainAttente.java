@@ -8,9 +8,12 @@ public class MainAttente {
         fenetre.setSize(500,500);
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        Activite test=new Activite();
+        Variantes test=new Variantes();
+        Activite oui=new Activite(test);
+    
 
-        fenetre.addWindowListener(test);
+        fenetre.addWindowListener(oui);
+        fenetre.add(test);
 
         fenetre.setVisible(true);
     }
