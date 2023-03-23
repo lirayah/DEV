@@ -5,7 +5,7 @@ import java.awt.event.*;
 public class Activite implements WindowListener{
     private Variantes jean;
     public Activite(Variantes a){
-        jean=a;
+        this.jean=a;
     }
     public void windowActivated(WindowEvent e){
         jean.setCoucou(true);
@@ -15,8 +15,7 @@ public class Activite implements WindowListener{
     public void windowOpened(WindowEvent e){}
     public void windowClosing(WindowEvent e){}
     public void windowDeactivated(WindowEvent e){
-        jean.setCoucou(false);
+        this.jean.setCoucou(false);
     }
     public void windowIconified(WindowEvent e){}
-
 }
