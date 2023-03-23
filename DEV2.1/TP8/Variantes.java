@@ -20,10 +20,10 @@ public class Variantes extends JComponent{
     public void setCoucou(boolean b){
         coucou=b;
         if(coucou){
-            this.setBackground(Color.WHITE);
+            this.setBackground(Color.GREEN);
         }
         else{
-            this.setBackground(Color.GREEN);
+            this.setBackground(Color.YELLOW);
         }
         this.repaint();
     }
@@ -48,6 +48,7 @@ public class Variantes extends JComponent{
             pinpin.fillPolygon(xPoints,yPoints,nPoints);
         }
         else{
+            
             pinpin.setColor(Color.MAGENTA);
             pinpin.fillOval(this.getWidth()/2,this.getHeight()/2,100,100);
         }

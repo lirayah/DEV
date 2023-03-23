@@ -8,14 +8,14 @@ public class Activite implements WindowListener{
         jean=a;
     }
     public void windowActivated(WindowEvent e){
-        jean.setCoucou(false);
+        jean.setCoucou(true);
     }
     public void windowClosed(WindowEvent e){}
     public void windowDeiconified(WindowEvent e){}
     public void windowOpened(WindowEvent e){}
     public void windowClosing(WindowEvent e){}
     public void windowDeactivated(WindowEvent e){
-        jean.setCoucou(true);
+        jean.setCoucou(false);
     }
     public void windowIconified(WindowEvent e){}
 
