@@ -1,9 +1,18 @@
 package CM1B;
 
+
 public class Variantes {
     private boolean coucou;
-    public void setCoucou(boolean b){
-        coucou=b;
-        //faire une méthode qui donne le true et ensuite check le true avec un while
+    
+    public Variantes(){
+        this.coucou=false;
+    }
+
+    public void setTruc(boolean b){
+        this.coucou=b;
+    }
+
+    public boolean checkTrue(){
+        return this.coucou;
     }
 }
