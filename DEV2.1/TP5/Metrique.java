@@ -5,8 +5,8 @@ import java.awt.print.Paper;
 public class Metrique extends Paper{
 
     //Constructeur
-    public Metrique{
-        
+    public Metrique(){
+        super();
     }
     
     //Méthodes get
