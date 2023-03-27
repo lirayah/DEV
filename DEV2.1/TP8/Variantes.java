@@ -18,8 +18,8 @@ public class Variantes extends JComponent{
     }
 
     public void setCoucou(boolean b){
-        coucou=b;
-        if(coucou){
+        this.coucou=b;
+        if(this.coucou){
             this.setBackground(Color.GREEN);
         }
         else{
@@ -48,7 +48,6 @@ public class Variantes extends JComponent{
             pinpin.fillPolygon(xPoints,yPoints,nPoints);
         }
         else{
-            
             pinpin.setColor(Color.MAGENTA);
             pinpin.fillOval(this.getWidth()/2,this.getHeight()/2,100,100);
         }

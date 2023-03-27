@@ -3,32 +3,25 @@ package TP9;
 import java.awt.event.*;
 
 public class Volume implements MouseWheelListener {
-    int a;
-    public Volume(){
+    private int a;
+    private Cercles ce;
+    public Volume(Cercles chat){
         super();
-        this.a=5;
+        this.a=0;
+        this.ce=chat;
     }
 
     public void mouseWheelMoved(MouseWheelEvent e){
         int i;
         i=e.getWheelRotation();
-        if(i>0){
+        if(i>0 && this.a<10){
             this.a++;
-            for (int j = 0; j < this.a; j++) {
-                
-                for (int j2 = 0; j2 < array.length; j2++) {
-                    
-                }
-            }
-            for (int b=this.a ; b<10 ; b++){
-                
-            }
+            ce.getNombre(this.a);
         }
-        if(i<0){
+        
+        if(i<0 && this.a>0){
             this.a--;
-            for (int j = 0; j < this.a; j++) {
-                
-            }
+            ce.getNombre(this.a);
         }
     }
 }
