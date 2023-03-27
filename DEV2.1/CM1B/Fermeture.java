@@ -21,3 +21,4 @@ public class Fermeture {
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
+//utiliser le dispose
