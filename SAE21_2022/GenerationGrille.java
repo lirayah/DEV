@@ -1,53 +1,75 @@
-import java.io.*;
 import java.util.*;
-import java.awt.*;
-import javax.swing.*;
-import javax.swing.border.*;
 
+/**
+ * La classe <code>GenerationGrille</code> permet de génerer une grille aléatoire
+ * @author Lionel Morin et Mathieu Proal
+ * @version 1.19.4
+ */
 public class GenerationGrille {
     private int size;
-    public GenerationGrille(int taille){
+    private Mode mode;
+    private int[][] casint;
+    public GenerationGrille(int taille,Mode mo){
         this.size=taille;
-
+        this.mode=mo;
+        casint=new int[taille][taille];
     }
 
-    //Génère une grille remplie aléatoirement modifiable
-    public JPanel[] GenererGrille(){
-        int[][] casint = new int[this.size][this.size];
+    /**
+     * Le constructeur génère une grille aléatoire que l'on pourra ensuite modifier
+     */
+    public void GenererGrille(){
+        //int[][] casint = new int[this.size][this.size];
+        int blanc=this.size*this.size;
         for (int i = 0; i < this.size; i++) {
             for (int j = 0; j < this.size; j++) {
-                double f;
-                f=Math.random();
-                if (f<0.65){
-                    casint[i][j]=0;
+                double rand;
+                rand=Math.random();
+                if (rand>0.65 && blanc>2){
+                    this.casint[j][i]=1;
+                    blanc--;
                 } else {
-                    casint[i][j]=1;
+                    this.casint[j][i]=0;
                 }
             }
         }
 
-        JPanel[] tabnel = new JPanel[this.size*this.size];
-        int kaze=0;
-        for (int i=0;i<this.size;i++){
-            for (int j = 0; j < this.size; j++) {
-                tabnel[kaze]=new JPanel();
-                Border lineborder = BorderFactory.createLineBorder(Color.black, 1); 
-                tabnel[kaze].setBorder(lineborder);
-                if (casint[i][j]==0){
-                    tabnel[kaze].setBackground(Color.WHITE);
-                } else {
-                    tabnel[kaze].setBackground(Color.BLACK);
+        int[] pos = new int[2];
+        pos[0]=-1;
+        pos[1]=-1;
+        Random rando=new Random(); 
+        int randu;
+        Random rando2=new Random(); 
+        int randu2;
+        int k;
+        while (pos[0]==-1 || pos[1]==-1){
+            k=0;
+            randu=rando.nextInt(this.size*this.size);
+            randu2=rando2.nextInt(this.size*this.size);
+            for (int i = 0; i < this.casint.length; i++) {
+                for (int j = 0; j < this.casint.length; j++) {
+                    if (pos[0]==-1 && randu==k && this.casint[i][j]!=1 && pos[1]!=k){
+                        pos[0]=k;
+                        this.casint[j][i]=2;
+                    }
+                    if (pos[1]==-1 && randu2==k && this.casint[i][j]!=1 && pos[0]!=k){
+                        pos[1]=k;
+                        this.casint[j][i]=3;
+                    }
+                    k++;
                 }
-                kaze++;
             }
         }
 
-        Object[] choix={"Ok"};
-        int r = JOptionPane.showOptionDialog(null, "Cliquez sur une case pour changer son statut, et appuyez sur ENTREE pour passer à la suite", 
-        "ok", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, choix, null);
-        Modif m = new Modif(tabnel);
-        m.modifier();
+        Affichage aff= new Affichage(this.mode);
+        aff.afficher(this.casint);
+    }
 
-        return tabnel;
+    /**
+     * La méthode getTab permet de récupérer le tableau généré lors de l'utilisation de GenererGrille
+     * @return le tableau contenant les paramètres de la grille
+     */
+    public int[][] getTab() {
+        return this.casint;
     }
 }

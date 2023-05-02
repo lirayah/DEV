@@ -1,38 +1,53 @@
-import java.awt.*;
-import javax.swing.*;
-import javax.swing.border.*;
 
+/**
+ * La classe <code>CreationGrille</code> initialise la grille pour permettre à l'utilisateur de créer la grille par la suite
+ * @author Mathieu Proal
+ * @version 1.0
+ */
 public class CreationGrille {
     private int size;
-    public CreationGrille(int taille){
+    private Mode mode;
+    private int[][] casint;
+    
+    /**
+     * Le constructeur récupère la taille de la grille et l'objet Mode dont on aura besoin par la suite
+     * @param taille La taille de la grille
+     * @param mo L'objet Mode
+     */
+    public CreationGrille(int taille, Mode mo){
         this.size=taille;
+        this.mode=mo;
+        casint=new int[taille][taille];
     }
 
-    //Créé une grille vide modifiable
-    public JPanel[] CreerGrille(){
-        JPanel[] tabnel = new JPanel[this.size*this.size];
-        for (int i = 0; i < tabnel.length; i++) {
-            tabnel[i]=new JPanel();
-            Border lineborder = BorderFactory.createLineBorder(Color.black, 1); 
-            tabnel[i].setBorder(lineborder);
-            tabnel[i].setBackground(Color.WHITE);
-        }
-
-        int[][] casint = new int[this.size][this.size];
+    /**
+     * La méthode creerGrille initialise la grille avec l'entrée et la sortie situées aux extrémités
+     */
+    public void creerGrille(){
+        int xthe=0;
+        int ythe=0;
+        int xarr=this.size-1;
+        int yarr=this.size-1;
         for (int i = 0; i < this.size; i++) {
             for (int j = 0; j < this.size; j++) {
-                casint[i][j]=0;
+                if (j==ythe && i==xthe){
+                    this.casint[i][j]=2;
+                } else if (j==yarr && i==xarr){
+                    this.casint[i][j]=3;
+                } else {
+                    this.casint[i][j]=0;
+                }
             }
         }
-        
-        Object[] choix={"Ok"};
-        int r = JOptionPane.showOptionDialog(null, "Cliquez sur une case pour changer son statut, et appuyez sur ENTREE pour passer à la suite", 
-        "ok", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, choix, null);
-        Modif m = new Modif(tabnel);
-        m.modifier();
+        Affichage aff= new Affichage(this.mode);
+        aff.afficher(this.casint);
+    }
 
-        
-
-        return tabnel;
+    /**
+     * La méthode getTab() permet de récupérer le tableau d'int 
+     * @return le nouveau tableau d'int
+     */
+    public int[][] getTab(){
+        return this.casint;
     }
 }
