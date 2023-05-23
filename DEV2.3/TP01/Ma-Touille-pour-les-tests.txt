@@ -1,0 +1,24 @@
+1.
+
+[morinl@salle222-15 TP01]$ java MonInt
+3 trois
+4 quatre
+9 neuf
+3 (neuf divisé par trois)
+0 (trois divisé par quatre)
+java.lang.IllegalStateException: Comme disait Sacha Guitry, je ne suis pas superstitieux mais on ne sait jamais.
+java.lang.ArithmeticException: / by zero
+java.lang.NullPointerException: la classe denominateur ne peut pas être null
+Ici le programme continue et les exceptions ne sont pas "graves"
+
+[morinl@salle222-15 TP01]$ java -ea MonInt
+3 trois
+4 quatre
+9 neuf
+3 (neuf divisé par trois)
+Exception in thread "main" java.lang.AssertionError
+	at MonInt.divise(MonInt.java:36)
+	at MonInt.main(MonInt.java:82)
+L'assertion ici fait n'importe quoi car on vérifie la division en remultipliant pour retomber sur le nombre d'avant (ce qui ne marche pas pour 3/4 car on est sur des int)
+
+2 types de catch d'erreurs
