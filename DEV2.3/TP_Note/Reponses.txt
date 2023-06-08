@@ -1,0 +1,37 @@
+// Il faut compléter les questions par vos réponses ci-dessous.
+
+========================================================================================
+Question 1.
+Quelle est la sanction disciplinaire encourrue en cas de triche à un TP noté à l'IUT?
+
+Votre réponse :
+Une note de 0 pour le DS
+
+
+
+========================================================================================
+Question 2.
+Quelles sont la ou les commandes nécessaires pour lancer les tests permettant de debuguer pour la première partie du TP?
+
+Votre réponse :
+Il faut d'abord compiler tous les fichiers java: javac *.java
+Il faut ensuite exporter le CLASSPATH si cela n'a pas déjà été fait: export CLASSPATH=".:/usr/share/java/junit.jar:/usr/share/java/hamcrest-core.jar:$CLASSPATH"
+il faut enfin lancer JUnit pour effectuer les tests avec: java org.junit.runner.JUnitCore LeNomDeLaClasseContenantLesTests
+
+
+========================================================================================
+Question 3.
+Comment puis-je tester si une méthode retourne une exception avec JUnit?
+
+Votre réponse :
+Pour tester si une méthode retourne une exception, on peut utiliser le parametre expected:
+Par ex:
+@Test(expected = NullPointerException.class)
+public void test(){
+	ClasseATester.methode(null);
+}
+Ceci va vérifier si la methode retourne une exception du type NullPointerException
+
+
+
+========================================================================================
