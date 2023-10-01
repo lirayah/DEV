@@ -14,14 +14,16 @@ public class Victoire extends JFrame{
         GridLayout gestio = new GridLayout(3,1);
         this.setLayout(gestio);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(true);
     }
 
     public static void main(String[] args) {
         Modele modele = new Modele();
         modele.nbVotes();
         Competiteur[] tab = modele.getTab();
-        int max = 0;
+        int max = -1;
         String pays = null;
+
         for (int i = 0; i < tab.length; i++) {
             if (tab[i].getScore() > max) {
                 max=tab[i].getScore();

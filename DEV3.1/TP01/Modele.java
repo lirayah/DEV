@@ -24,7 +24,10 @@ public class Modele {
                         ResultSet rs=pst.executeQuery();
 
                         while (rs.next()) {
-                            if (tab[pays].getPays()!=rs.getString(1)){
+                            String paysActu=tab[pays].getPays();
+                            String paysSuiv=rs.getString(1);
+                            if (paysActu != paysSuiv){
+                                pays++;
                                 tab[pays]=new Competiteur();
                                 tab[pays].setPays(rs.getString(1));
                             }

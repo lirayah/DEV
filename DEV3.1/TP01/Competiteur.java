@@ -7,16 +7,16 @@ public class Competiteur {
         this.pays = null;
     }
 
-    public void addScore(int score) {
-        this.score += score;
+    public void addScore(int sscore) {
+        this.score += sscore;
     }
     
     public int getScore() {
         return this.score;
     }
 
-    public void setPays(String pays) {
-        this.pays = pays;
+    public void setPays(String ppays) {
+        this.pays = ppays;
     }
 
     public String getPays() {
