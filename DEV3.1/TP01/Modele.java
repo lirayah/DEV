@@ -2,7 +2,7 @@ import java.sql.*;
 
 
 public class Modele {
-    Competiteur[] tab;
+    private Competiteur[] tab;
 
     public Modele() {
         this.tab = new Competiteur[26];
@@ -24,16 +24,14 @@ public class Modele {
                         ResultSet rs=pst.executeQuery();
 
                         while (rs.next()) {
-                            String paysActu=tab[pays].getPays();
+                            String paysActu=this.tab[pays].getPays();
                             String paysSuiv=rs.getString(1);
-                            if (paysActu != paysSuiv){
+                            if (!paysSuiv.equals(paysActu)){
                                 pays++;
-                                tab[pays]=new Competiteur();
-                                tab[pays].setPays(rs.getString(1));
+                                this.tab[pays].setPays(rs.getString(1));
                             }
-                            tab[pays].addScore(rs.getInt(3));
+                            this.tab[pays].addScore(rs.getInt(3));
                         }
-
                     } catch (SQLException e) {
                         System.err.println("Resultset" + e.getMessage());
                     }
