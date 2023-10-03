@@ -8,6 +8,7 @@ public class Bouton implements ActionListener{
         this.v=vi;
     }
 
+    @Override
     public void actionPerformed(ActionEvent e){
         this.v.oui();
     }
