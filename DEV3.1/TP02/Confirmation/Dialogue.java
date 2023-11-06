@@ -7,6 +7,6 @@ public class Dialogue extends JDialog {
     }
 
     public void open(){
-        this.
+        this.setAlwaysOnTop(rootPaneCheckingEnabled);
     }
 }
