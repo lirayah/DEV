@@ -4,5 +4,6 @@
         "lib/**/*.jar",
         "/export/documents/mariadb-client.jar",
         "d:\\Users\\Lirayah\\Documents\\BUT\\mariadb-client.jar"
-    ]
+    ],
+    "java.project.sourcePaths": []
 }
