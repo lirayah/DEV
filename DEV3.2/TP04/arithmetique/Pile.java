@@ -1,0 +1,2 @@
+public interface Pile<E> {
+}
