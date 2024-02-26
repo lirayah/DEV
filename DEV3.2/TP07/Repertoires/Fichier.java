@@ -29,7 +29,7 @@ public class Fichier extends File{
         for (Fichier fichier : this.arbre){
             System.out.println();
             for (int j = 0; j < i; j++) {
-                System.out.print("  ");
+                System.out.print("   ");
             }
             System.out.print(fichier.getName());
             if (fichier.getNbEnfants() > 0) {
