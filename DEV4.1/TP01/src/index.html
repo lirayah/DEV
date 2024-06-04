@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1,witdh=device-width">  
+
+		<title>Fourmi de Langton</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+		<style>
+		canvas {
+		position : absolute ;
+		top : 0;
+		left : 0;
+		z-index : -1;
+		}
+		.control {
+		position : absolute ;
+		top : 0;
+		left : 0;
+		width : auto;
+		}
+		</style>
+	</head>
+
+	<body>
+		<div class="control m-6 has-text-centered">
+		<h4 class="has-text-primary-dark title is-4">
+			Fourmi de Langton
+		</h4>
+
+		<nav class="m-3">
+			<button class="button" id="next-move">Next</button>
+			<button class="button" id="autoplay">Auto</button>
+			<button class="button" id="plus-100">+100</button>
+		</nav>
+
+		<p class="mb-6 is-size-7">
+			Nombre de mouvements : <span id="move-value"></span> 
+		</p>
+		</div>
+			<canvas></canvas>
+		<script type="module" src="app.js"></script>
+	</body>
+</html>

@@ -13,7 +13,7 @@ $java org.junit.runner.JUnitCore CalculatorTest0
 
 voir plusieurs classes de tests suite à suite, en faisant :
 
-$java org.junit.runner.JUnitCore CalculatorTest0 CalculatorTest1
+$ java org.junit.runner.JUnitCore CalculatorTest0 CalculatorTest1
 
 Des choses un peu plus avancées
 

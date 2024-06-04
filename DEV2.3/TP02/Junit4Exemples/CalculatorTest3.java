@@ -13,7 +13,7 @@ public class CalculatorTest3 {
     public void evaluatesGoodExpression() throws Exception{
         Calculator calculator = new Calculator();
         int sum = calculator.evaluate("1+2+3");
-        assertEquals(42, sum);
+        assertEquals(6, sum);
     }
 
 

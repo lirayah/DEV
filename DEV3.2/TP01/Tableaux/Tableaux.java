@@ -1,5 +1,4 @@
 import java.text.Collator;
-import java.text.RuleBasedCollator;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -11,8 +10,8 @@ public class Tableaux {
         String[] a=Arrays.copyOf(args, 5);
         System.out.println(Arrays.toString(a));
         // c)
-        RuleBasedCollator c=new RuleBasedCollator(null);
-        Arrays.sort(args, null);
-        System.out.println();
+        Comparator<Object> c=Collator.getInstance();
+        Arrays.sort(args, c);
+        System.out.println(Arrays.toString(args));
     }  
 }
