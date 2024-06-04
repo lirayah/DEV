@@ -1,0 +1,8 @@
+dans le vagrantfile:
+	ligne 1 -> décalaration d'une variable (config)
+	ligne 3 -> execute tout ce qu'il y a entre SHELL et le SHELL à la fin du fichier
+	
+vagrant up --> création
+vagrant down --> destruction
+vagrant halt --> stopper la machine
+vagrant reload --> relancer la machine

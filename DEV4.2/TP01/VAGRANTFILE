@@ -1,0 +1,13 @@
+Vagrant.configure("2") do |config|
+config.vm.box = "bento/centos-7.7"
+	config.vm.provision "shell", inline: <<-SHELL
+	yum -y update
+		#DOCKER-EE
+		#prerequis
+		yum install -y yum-utils device-mapper-persistent-data lvm2 net-tools git
+		#Installation
+		yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+		yum -y install docker-ce
+		systemctl enable docker ; systemctl start docker
+	SHELL
+end

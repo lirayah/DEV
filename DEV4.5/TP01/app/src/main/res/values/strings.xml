@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TP01</string>
+    <string name="ok">OK</string>
+    <string name="fleche_haut">^</string>
+    <string name="fleche_gauche">&lt;</string>
+    <string name="fleche_droite">&gt;</string>
+    <string name="fleche_bas">V</string>
+    <string name="centre">O</string>
 </resources>
