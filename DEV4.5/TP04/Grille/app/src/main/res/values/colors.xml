@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ccourt">#F00F</color>
+    <color name="clong">#A6D539</color>
+    <color name="doubleTap">#FF0F</color>
+    <color name="fling">#FFF</color>
+</resources>

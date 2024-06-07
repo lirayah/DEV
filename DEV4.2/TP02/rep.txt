@@ -1,0 +1,3 @@
+pour exposer les ports -p host_port:container_port
+pour monter un volume dans un container : -v volume:/dossier/où/monter
+docker run -d --name tp23 -v volume_serveur_web:/usr/local/apache2/htdocs -p 80:80 httpd:alpine3.19
