@@ -11,7 +11,6 @@ public class ControllerVue implements View.OnTouchListener{
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        v = (Vue) v;
         if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
             couleurs.nextCouleur();
             v.invalidate();

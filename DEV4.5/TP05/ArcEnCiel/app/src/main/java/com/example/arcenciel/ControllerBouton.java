@@ -1,5 +1,6 @@
 package com.example.arcenciel;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +19,6 @@ public class ControllerBouton implements View.OnClickListener{
         Intent i = new Intent(mainActivity,SecondaryActivity.class);
         i.putExtra("couleurs",couleurs.getActif());
         Log.d("A","ICI");
-        mainActivity.startActivityForResult(i,1);
+        mainActivity.startActivityForResult(i, Activity.RESULT_OK);
     }
 }

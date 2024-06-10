@@ -8,17 +8,16 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class Vue extends View {
+public class VuePrincipale extends View {
     private Couleurs couleurs;
     private ControllerBouton cb;
 
-    public Vue(Context context, @Nullable AttributeSet attrs) {
+    public VuePrincipale(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         this.couleurs = new Couleurs();
         this.setBackgroundColor(couleurs.getCouleur());
         ControllerVue cv = new ControllerVue(couleurs);
         setOnTouchListener(cv);
-
     }
 
     @Override
