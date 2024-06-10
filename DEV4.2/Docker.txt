@@ -1,0 +1,14 @@
+pour exposer les ports -p host_port:container_port
+pour monter un volume dans un container : -v volume:/dossier/où/monter
+docker run -d --name tp23 -v volume_serveur_web:/usr/local/apache2/htdocs -p 80:80 httpd:alpine3.19
+
+
+EXPOSE est juste informatif tandis que PORT expose le port
+
+pour redis en cli:
+	se connecter:
+	docker exec -IT tp04-redis-1 /bin/sh (le nom du container --> peut avoir avec docker ps)
+	redis-cli
+	set code 12345
+	get code
+	save

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ArcEnCiel</string>
+    <string name="selection">Selection</string>
+    <string name="Rouge">Rouge</string>
+    <string name="Orange">Orange</string>
+    <string name="Jaune">Jaune</string>
+    <string name="Vert">Vert</string>
+    <string name="Bleu">Bleu</string>
+    <string name="Indigo">Indigo</string>
+    <string name="Violet">Violet</string>
+    <string name="Ok">OK</string>
+</resources>

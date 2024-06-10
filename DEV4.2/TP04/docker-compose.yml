@@ -1,0 +1,42 @@
+services:
+  redis:
+    image: redis/redis-stack
+    ports:
+      - "6379:6379"
+    restart: always
+    volumes:
+      - redis_data:/data:rw
+
+  redinsight:
+    image: redis/redisinsight
+    ports:
+      - "5540:5540"
+    restart: always
+    volumes:
+      - redinsight_data:/db:rw
+
+  php:
+    image: windok/php-redis
+    restart: always
+    volumes:
+      - ./web/:/usr/share/nginx/html
+    environment:
+      - NOM="Morin"
+      - PRENOM="Lionel"
+    deploy:
+      mode: replicated
+      replicas: 2
+  
+  nginx:
+    image: nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./web/:/usr/share/nginx/html
+      - ./nginx/:/etc/nginx/conf.d
+
+volumes:
+  redis_data:
+  redinsight_data:
