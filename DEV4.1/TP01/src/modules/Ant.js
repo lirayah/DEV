@@ -10,6 +10,8 @@ class Ant {
 	state = 0;
 	tiles = null;
 
+	antState = 0;
+
 	constructor (w,h)
 	{
 		this.tiles = new Array(w).fill(null);
@@ -39,24 +41,29 @@ class Ant {
 		this.move ++;
 		this.computeNextState();
 	}
-	rotateRight() {
-		this.direction = (this.direction - 90)%360;
-	}
 
-	rotateLeft() {
+	rotateRight() {
 		this.direction = (this.direction + 90)%360;
 	}
 
-	computeNextState()
-	{
-		this.moveForward();
+	rotateLeft() {
+		this.direction = (this.direction - 90 + 360)%360;
+	}
 
-		if (this.tiles[this.x][this.y]==0) {
+	computeNextState()	
+	{
+		if (this.tiles[this.x][this.y]===0) {
 			this.tiles[this.x][this.y]=1;
-			this.rotateLeft;
+			if (this.antState === 0) {
+				this.antState += 1;
+			}
+			this.rotateRight();
 		} else {
 			this.tiles[this.x][this.y]=0;
-			this.rotateRight;
+			if (this.antState === 1) {
+				this.antState += 1;
+			}
+			this.rotateLeft();
 		}
 	}
 }
