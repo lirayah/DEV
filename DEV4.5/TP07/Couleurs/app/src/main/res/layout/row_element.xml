@@ -6,12 +6,11 @@
     android:layout_height="wrap_content"
 >
 
-    <View
+    <fr.iut_fbleau.apl41.couleurs.Disque
         android:layout_width="@dimen/color_size"
         android:layout_height="@dimen/color_size"
         android:id="@+id/couleur"
         android:layout_margin="@dimen/color_margin"
-        android:background="#ff20a080"
         android:gravity="center" />
 
     <TextView

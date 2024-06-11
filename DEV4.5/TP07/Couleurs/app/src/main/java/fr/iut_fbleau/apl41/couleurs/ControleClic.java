@@ -1,6 +1,7 @@
 package fr.iut_fbleau.apl41.couleurs;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
@@ -16,5 +17,8 @@ public class ControleClic implements AdapterView.OnItemClickListener {
     @Override
     public void onItemClick(AdapterView<?> liste, View vue, int positionListe, long idBase) {
         Toast.makeText(this.parent, "Clic sur ligne "+(positionListe+1), Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(parent, SecondaryActivity.class);
+        i.putExtra("id", idBase);
+        parent.startActivityForResult(i,0);
     }
 }

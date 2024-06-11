@@ -1,9 +1,11 @@
 package fr.iut_fbleau.apl41.couleurs;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.provider.BaseColumns;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
@@ -55,5 +57,21 @@ public class Liste extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == 0){
+            long id = data.getLongExtra("id",-1);
+            if (id != -1) {
+                AccesBaseDeDonnees acces = new AccesBaseDeDonnees(this);
+                SQLiteDatabase sqLiteDatabase = acces.getWritableDatabase();
+                String[] str = {String.valueOf(id)};
+                sqLiteDatabase.delete(AccesBaseDeDonnees.NOM_TABLE, BaseColumns._ID + " = ?",str);
+                remplirListe();
+            }
+
+        }
     }
 }
