@@ -41,13 +41,5 @@ public class SecondaryActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d("jsp","stop");
-        for (int i = 0; i < ids.length - 1; i++) {
-            Switch s = findViewById(ids[i]);
-            actifs[i] = s.isChecked();
-        }
-        Intent i = new Intent();
-        i.putExtra("actif",actifs);
-        setResult(RESULT_OK,i);
     }
 }

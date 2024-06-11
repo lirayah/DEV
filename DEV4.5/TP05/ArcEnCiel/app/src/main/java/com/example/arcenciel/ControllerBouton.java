@@ -18,7 +18,7 @@ public class ControllerBouton implements View.OnClickListener{
     public void onClick(View v) {
         Intent i = new Intent(mainActivity,SecondaryActivity.class);
         i.putExtra("couleurs",couleurs.getActif());
-        Log.d("A","ICI");
-        mainActivity.startActivityForResult(i, Activity.RESULT_OK);
+        Log.d("jsp","ICI");
+        mainActivity.startActivityForResult(i, 1);
     }
 }
