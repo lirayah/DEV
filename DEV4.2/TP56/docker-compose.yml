@@ -2,7 +2,7 @@ services:
   redis:
     image: redis/redis-stack
     ports:
-      - "6379:6379"
+      - "6379:6379" # ne pas faire, pas d'exposition de ports sur une base de données
     restart: always
     volumes:
       - redis_data:/data:rw
@@ -49,6 +49,7 @@ services:
 networks:
   front:
   back:
+  # On peut aussi rajouter un réseau db uniquement pour redisinsight et donc redis communique avec back et db
 
 volumes:
   redis_data:

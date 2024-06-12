@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         >
         <Button
+            android:id="@+id/a"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -20,6 +21,7 @@
             android:background="#ffd1d1d1"
             />
         <Button
+            android:id="@+id/t"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -30,6 +32,7 @@
 
     <TableRow>
         <Button
+            android:id="@+id/c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -37,6 +40,7 @@
             android:background="#ffd1d1d1"
             />
         <Button
+            android:id="@+id/g"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -45,6 +49,7 @@
             />
     </TableRow>
     <TextView
+        android:id="@+id/text_view"
         android:textSize="40dp"
         />
-</TableLayout>²
+</TableLayout>

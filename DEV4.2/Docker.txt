@@ -5,6 +5,9 @@ docker run -d --name tp23 -v volume_serveur_web:/usr/local/apache2/htdocs -p 80:
 
 EXPOSE est juste informatif tandis que PORT expose le port
 
+docker compose up -d
+-f pour spécifier un fichier
+
 pour redis en cli:
 	se connecter:
 	docker exec -IT tp04-redis-1 /bin/sh (le nom du container --> peut avoir avec docker ps)
