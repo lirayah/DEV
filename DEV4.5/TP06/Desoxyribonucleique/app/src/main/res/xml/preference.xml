@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory
         android:title="@string/couleur_de_fond">
         <ListPreference
             android:key="@string/background_color"
             android:entries="@array/couleurs_nom"
             android:entryValues="@array/couleurs_val"
-            android:defaultValue="@string/default_value_vert"
-            >
-        </ListPreference>
+            android:defaultValue="@string/default_value_vert"/>
+<!--            app:title="@string/couleur_de_fond"-->
+<!--            />-->
     </PreferenceCategory>
+
     <PreferenceCategory
         android:title="Boutons activés"
         >
         <SwitchPreference
             android:title="@string/a"
             android:defaultValue="true"
+            android:key="@string/a"
             />
         <SwitchPreference
             android:title="@string/c"
             android:defaultValue="true"
+            android:key="@string/c"
             />
         <SwitchPreference
             android:title="@string/g"
             android:defaultValue="true"
+            android:key="@string/g"
             />
         <SwitchPreference
             android:title="@string/t"
             android:defaultValue="true"
+            android:key="@string/t"
             />
     </PreferenceCategory>
 </PreferenceScreen>
