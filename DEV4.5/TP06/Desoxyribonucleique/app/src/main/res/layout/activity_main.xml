@@ -9,6 +9,11 @@
     android:background="#ff0f4a1f"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"/>
+
     <TableRow
         android:layout_width="match_parent"
         >
