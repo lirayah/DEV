@@ -27,22 +27,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.g).setOnClickListener(ajoutBase);
         findViewById(R.id.c).setOnClickListener(ajoutBase);
         findViewById(R.id.t).setOnClickListener(ajoutBase);
-        this.observateurPrefs = new ObservateurPrefs();
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        preferences.registerOnSharedPreferenceChangeListener(this.observateurPrefs);
-        boolean boutonA = preferences.getBoolean(SettingsActivity.BOUTON_A,true);
-        boolean boutonC = preferences.getBoolean(SettingsActivity.BOUTON_C,true);
-        boolean boutonG = preferences.getBoolean(SettingsActivity.BOUTON_G,true);
-        boolean boutonT = preferences.getBoolean(SettingsActivity.BOUTON_T,true);
-        if (!boutonA){
-            findViewById(R.id.a).setActivated(false);
-        } else if (!boutonC) {
-            findViewById(R.id.c).setActivated(false);
-        } else if (!boutonG) {
-            findViewById(R.id.g).setActivated(false);
-        } else if (!boutonT) {
-            findViewById(R.id.t).setActivated(false);
-        }
     }
 
     @Override
@@ -60,5 +44,19 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        if (!sharedPreferences.getBoolean(getResources().getString(R.string.a), true)){
+            ((Button) findViewById(R.id.a)).setEnabled(false);
+        } else {
+            ((Button) findViewById(R.id.a)).setEnabled(true);
+        }
+        int couleur = Integer.parseInt(sharedPreferences.getString(getResources().getString(R.string.background_color), "ff0f4a1f"), 16);
+        findViewById(R.id.vue_background).setBackgroundColor(couleur);
     }
 }

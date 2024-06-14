@@ -20,7 +20,5 @@ public class SettingsActivity extends PreferenceActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.addPreferencesFromResource(R.xml.preference);
-        this.obs = new ObservateurPrefs();
-        getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this.obs);
     }
 }

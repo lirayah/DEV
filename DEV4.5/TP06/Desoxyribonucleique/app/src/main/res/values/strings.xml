@@ -6,7 +6,7 @@
     <string name="a">A</string>
     <string name="couleur_de_fond">Couleur de Fond</string>
     <string name="background_color">background_color</string>
-    <string name="default_value_vert">Vert</string>
+    <string name="default_value_vert">FF0F4A1F</string>
     <string name="title_activity_settings">SettingsActivity</string>
 
     <!-- Preference Titles -->
@@ -24,4 +24,5 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="parametres">Parametres</string>
+    <string name="apparence">Apparence</string>
 </resources>

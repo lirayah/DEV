@@ -2,14 +2,14 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory
-        android:title="@string/couleur_de_fond">
+        android:title="@string/apparence">
         <ListPreference
             android:key="@string/background_color"
             android:entries="@array/couleurs_nom"
             android:entryValues="@array/couleurs_val"
             android:defaultValue="@string/default_value_vert"/>
-<!--            app:title="@string/couleur_de_fond"-->
-<!--            />-->
+            app:title="@string/couleur_de_fond"
+            />
     </PreferenceCategory>
 
     <PreferenceCategory
