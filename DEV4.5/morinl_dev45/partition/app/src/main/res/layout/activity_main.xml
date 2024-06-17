@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/c1"
+        android:layout_width="@dimen/base"
+        android:layout_height="@dimen/base"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/bleu" />
+
+    <View
+        android:id="@+id/c2"
+        android:layout_width="@dimen/base"
+        android:layout_height="@dimen/base"
+        android:layout_margin="30dp"
+        android:background="@color/rose"
+        android:layout_toEndOf="@id/c1"
+        android:layout_alignParentEnd="true"
+        />
+
+    <View
+        android:id="@+id/c3"
+        android:layout_width="@dimen/base"
+        android:layout_height="@dimen/base"
+        android:layout_below="@id/c1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/rose" />
+
+    <View
+        android:layout_width="@dimen/base"
+        android:layout_height="@dimen/base"
+        android:layout_below="@id/c2"
+        android:layout_toEndOf="@id/c3"
+        android:background="@color/bleu"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        />
+
+</RelativeLayout>
