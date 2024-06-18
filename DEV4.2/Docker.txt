@@ -10,7 +10,7 @@ docker compose up -d
 
 pour redis en cli:
 	se connecter:
-	docker exec -IT tp04-redis-1 /bin/sh (le nom du container --> peut avoir avec docker ps)
+	docker exec -it tp04-redis-1 /bin/sh (le nom du container --> peut avoir avec docker ps)
 	redis-cli
 	set code 12345
 	get code
