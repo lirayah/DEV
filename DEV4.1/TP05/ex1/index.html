@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Riot todo</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" href="todo.css">
+		<script src="todo.riot" type="riot"></script>
+		<script src="https://unpkg.com/riot@9.1.3/riot+compiler.min.js"></script>
+	</head>
+
+	<body>
+
+		<todo />
+
+		<script>
+			riot.compile().then(() => {
+				riot.mount('todo', {
+					title: 'I want to behave!',
+					items: [
+						{ title: 'Avoid excessive caffeine', done: false },
+						{ title: 'Be less provocative', done: true  },
+						{ title: 'Be nice to people', done: true }
+					]
+				})
+			})
+		</script>
+	</body>
+</html>

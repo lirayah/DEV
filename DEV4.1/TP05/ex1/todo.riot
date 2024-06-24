@@ -1,0 +1,82 @@
+<todo>
+<h3>{ props.title }</h3>
+
+<ul>
+	<li each={ item in view() }>
+		<label class={ item.done ? 'completed' : null }>
+			<input
+	   type="checkbox"
+	checked={ item.done }
+	onclick={ () => toggle(item) } />
+	{ item.title } 
+		</label>
+	</li>
+</ul>
+
+<form onsubmit={ add }>
+	<input oninput={ edit } />
+	<button disabled={ !state.text }>
+		Add #{ state.items.length + 1 }
+	</button>
+	<button  onclick={ clear } disabled={ !state.items.find(item => item.done) }>Clear done</button>
+	<ul class="filters">
+		<li><a href="#" onclick="{ e => filter('All') }">All</a></li>
+		<li><a href="#" onclick="{ e => filter('Active') }">Active</a></li>
+		<li><a href="#" onclick="{ e => filter('Done') }">Done</a></li>
+	</ul>
+</form>
+	<script>
+		export default function todos(){
+			return {
+				onBeforeMount(props, state) {
+					// initial state
+					this.state = {
+						items: props.items,
+						text: '',
+						filter: 'All'
+					}
+				},
+				edit(e) {
+					// update only the text state
+					this.update({
+						text: e.target.value
+					})
+				},
+				clear(e) {
+					e.preventDefault();
+					this.state.items = this.state.items.filter(item => !item.done)
+					this.update();
+				},
+				add(e) {
+					e.preventDefault();
+					this.state.items.push({title: this.state.text, done: false})
+					this.update();
+				},
+				toggle(item) {
+					item.done = !item.done
+					// trigger a component update
+					this.update()
+				},
+				filter(filtre){
+					this.state.filter = filtre;
+					this.update();
+				},
+				view(){
+					switch (this.state.filter) {
+						case 'Done':
+							return this.state.items.filter((item) => item.done);
+							break;
+
+						case 'Active':
+							return this.state.items.filter((item) => !item.done);
+							break;
+
+						default:
+							return this.state.items
+							break;
+					}
+				}
+			}
+		}
+	</script>
+</todo>
