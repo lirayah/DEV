@@ -1,0 +1,57 @@
+services:
+  nginx:
+    image: nginx:1.23-alpine
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d/
+      - ./web:/usr/share/nginx/html/
+    networks:
+      - front
+    
+  php-iut:
+    build: .
+    restart: unless-stopped
+    deploy:
+      mode: replicated
+      replicas: 2
+    volumes:
+      - ./web:/usr/share/nginx/html/
+    networks:
+      - front
+      - back
+      - db
+      - uml
+
+  plantuml-iut:
+    image: plantuml/plantuml-server:jetty
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    networks:
+      - uml
+
+  redis-iut:
+    image: redis/redis-stack:latest
+    restart: unless-stopped
+    volumes:
+      - data:/data
+    networks:
+      - db
+
+  redinsight-iut:
+    image: redis/redisinsight
+    restart: always
+    ports:
+      - "5540:5540"
+    networks:
+      - db
+networks:
+  front:
+  back:
+  db:
+  uml:
+
+volumes:
+  data:
